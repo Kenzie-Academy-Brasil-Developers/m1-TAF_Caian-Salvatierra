@@ -24,13 +24,20 @@ let passed = false;
 // **sua lógica a partir daqui**
  
 if (gender === "male"){
-    if ( height === 1.70 ){
-        if (barReps === 6 || barSeconds === 15){
+    //Essa condicional está verificando se a altura é maior ou igual a 1.70
+    if ( height >= 1.70 ){
+        // Essa condicional se a quantidade de Repetições com barra é maior ou igual a 6 OU  
+        //Tempo das repetições com barra maior ou igual a 15 segundos 
+        if (barReps >= 6 || barSeconds >= 15){
+              // Verificando se Abs é maior ou igual a 41
             if (abs >= 41){
-                if(runDistance === 3000 && runTime === 720 || runDistance === 5000 && runTime === 1200 ){
-                 if (swimDistance === 100 && swimTime === 60 || diveTime === 30){
-                    let passed = true;
-                 }   
+                //(Verificiando se a distancia é maior ou 3km E o tempo menor ou igual 12 minutos) OU
+                //(Verificiando se a distancia é maior ou 5km E o tempo menor ou igual 20 minutos)
+                if((runDistance >= 3000 && runTime <= 720) || (runDistance >= 5000 && runTime <= 1200) ){
+                    // (Distância da natação menor ou igual 100 metros E tempo de 1 minuto) OU tempo de mergulho 30 segundos.
+                    if ((swimDistance >= 100 && swimTime <= 60) || diveTime <= 30){
+                       passed = true;
+                    }   
                 }
             }
         }
@@ -38,13 +45,20 @@ if (gender === "male"){
 }
 
 if (gender === "female"){
-    if ( height === 1.60 ){
-        if (barReps === 5 || barSeconds === 12){
+    //Essa condicional está verificando se a altura é maior ou igual a 1.60
+    if ( height >= 1.60 ){
+        // Essa condicional se a quantidade de Repetições com barra é maior ou igual a 5 OU  
+        //Tempo das repetições com barra maior ou igual a 12 segundo 
+        if (barReps >= 5 || barSeconds >= 12){
+            // Verificando se Abs é maior ou igual a 41
             if (abs >= 41){
-                if(runDistance === 4000 && runTime === 900 || runDistance === 6000 && runTime === 1320 ){
-                 if (swimDistance === 100 && swimTime === 60 || diveTime === 30){
-                    let passed = true;
-                 }   
+                //(Verificiando se a distancia é maior ou 4km E o tempo menor ou igual 15 minutos) OU
+                //(Verificiando se a distancia é maior ou 6km E o tempo menor ou igual 22 minutos)
+                if((runDistance >= 4000 && runTime <= 900) || (runDistance >= 6000 && runTime <= 1320) ){
+                    // (Distância da natação menor ou igual 100 metros E tempo de 1 minuto) OU tempo de mergulho 30 segundos.
+                    if ((swimDistance >= 100 && swimTime <= 60) || diveTime <= 30){
+                     passed = true;
+                    }   
                 }
             }
         }
